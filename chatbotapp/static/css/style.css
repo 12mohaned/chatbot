@@ -1,331 +1,251 @@
-/* https://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+* {
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    font-weight: 100;
 
-///////////////
-// END OF RESET
-///////////////
-$main-color-1: #2ecc71;
-$main-color-2: #27ae60;
-$second-color-1: #CC8914;
-$background-color: #363636;
-$bot-output-delay: 600ms;
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
-
-
-*, *:before, *:after {
-  box-sizing: border-box;
 }
 
 body {
-  overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1em;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-
-  line-height: 1.45;
-  background-color: $background-color;
+    background: rgb(39, 119, 180);
 }
 
-.chatbot__overview {
+.chatbox {
 
-  background-color: $background-color;
+    width: 500px;
+    min-width: 390px;
+    height: 600px;
+    background: white;
+    padding: 25px;
+    margin: 0px auto 0px auto;
+    box-shadow: 0 3px #ccc;
 
-  display: flex;
-  flex-flow: row nowrap;
-  align-content: space-between;
-
-  // max-width: 35em;
-  min-height: 80vh;
-  max-height: 80vh;
-  margin: 0 auto;
-
-  // background-color: #444;
-  // border: 1px solid #fff;
-  padding: 1em;
-  padding-bottom: 0;
-
-  // overflow-y: scroll;
 }
 
-.chatbot__overview--container {
+.chatlogs {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-.chatlist {
-  font-family: inherit;
-  font-size: 1em;
+/*Styling the scrolllbar*/
+.chatlogs::-webkit-scrollbar{
+    width: 10px;
+}
 
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-end;
-
-  overflow-x: hidden;
-
-  width: 100%;
-  max-width: 35em;
-  max-height: 75vh;
-  margin: 0 auto;
-
-  .userInput, .bot__output {
-    padding: 0.85em;
-    margin: 0.5em;
-    max-width: 100%;
-
-    background-color: #fff;
+.chatlogs::-webkit-scrollbar-thumb{
     border-radius: 5px;
-    border-bottom: 1px solid #777;
-
-    // transition: all 300ms ease-in;
-  }
-  .userInput {
-    text-transform: lowercase;
-    box-shadow: 1px 1px 2px #666;
-    border-top: 4px solid $second-color-1;
-
-    opacity: 0;
-
-    animation-name: animateBubble;
-    animation-duration: 400ms;
-    animation-iteration-count: 1;
-    animation-play-state: running;
-    animation-fill-mode: forwards;
-  }
-  .bot__output {
-    align-self: flex-start;
-    box-shadow: -1px 1px 2px #666;
-    border-top: 4px solid $main-color-2;
-    // transform-origin: left 50%;
-    will-change: auto;
-    height: auto;
-
-    opacity: 0;
-
-    animation-name: animateBubble;
-    animation-duration: 400ms;
-    animation-iteration-count: 1;
-    animation-play-state: paused;
-    animation-fill-mode: forwards;
-    &:last-child {
-      display: none;
-    }
-  }
-  .bot__command {
-    // border-bottom: 2px solid $main-color-1;
-    color: #f5f5f5;
-    // background-color: $main-color-1;
-    color: $main-color-2;
-    font-weight: 600;
-    padding: 0.1em;
-  }
-  .bot__output:nth-child(1){
-    animation-delay: $bot-output-delay;
-    animation-play-state: running;
-  }
-  .bot__output:nth-child(2){
-    animation-delay: ($bot-output-delay * 2);
-    animation-play-state: running;
-  }
-  .bot__output:nth-child(3){
-    animation-delay: ($bot-output-delay * 3);
-    animation-play-state: running;
-  }
-  .bot__output--standard:last-child{
-    display: block;
-  }
-  .bot__output--failed {
-    display: block !important;
-  }
-  .bot__output--second-sentence {
-    display: block;
-  }
-  .bot__outputImage {
-    max-width: 16em;
-    height: 12em;
-  }
-}
-
-@keyframes animateBubble {
-  0%{
-    transform: translateY(-20%);
-    opacity: 0;
-  }
-  100%{
-    transform: translateY(0);
-    opacity: 1;
-  }
+    background: rgba(0, 0, 0, .1);
 }
 
 
-
-
-.block--background {
-  // background-color: $main-color-2;
-  background-color: $background-color;
-  width: 100vw;
-  height: 100vh;
+.chat {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin-bottom: 10px;
 }
 
-#chatform {
-  display: flex;
-  justify-content: center;
-  // display: inline-block;
-  // height: 100%;
-  width: 80%;
-  max-width: 35em;
-  margin: 0 auto;
-  padding-top: 1em;
-
-  font-size: 1em;
-  font-family: Helvetica;
-  @media screen and(max-width: 29em) {
-    width: 90%;
-  }
+.user-photo img{
+    background-color: rgb(39, 119, 180);
+    padding: 8px;
+    width: 100%;
 }
 
-.chatbox-area {
-  margin: 0 auto;
-  position: relative;
-  bottom: 0;
-  height: auto;
-  width: 100%;
+.chat .chat-message {
+    padding: 15px;
+    margin: 5px 10px 0;
+    font-size: 18px;
 }
 
-textarea[name="chatbox"] {
-  resize: none;
-  border: 2px solid $main-color-2;
-  border-right: 0;
-  // border-bottom: 0;
-  width: 70%;
-  background-color: transparent;
-  color: #fff;
-  // max-width: 30em;
-  height: 3em;
-  margin: 0;
-  padding: 0.75em;
-  // float: left;
-  border-radius: 8px 0px 0px 8px;
-  font-family: inherit;
-  font-size: 1em;
-  &:focus {
+.user-photo {
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.friend .chat-message {
+    color: black;
+    width: auto;
+    max-width: 70%;
+    background: rgb(229, 229, 234);
+    border-radius: 20px 20px 20px 0;
+}
+
+.self .chat-message {
+    color: white;
+    max-width: 80%;
+    width: auto;
+    margin: 5px 0 5px auto;
+    border-radius: 20px 20px 0px 20px;
+    background: rgb(64, 172, 246);
+    overflow-wrap: break-word;
+}
+
+.headerBar{
+    font-size: 25px;
+    color: white;
+    padding: 25px;
+    width: 500px;
+    min-width: 390px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin: 20px auto 0px auto;
+    background: rgb(226, 118, 30);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.headerBar .title {
+    margin: auto 20px;
+}
+
+.headerBar .user-photo {
+    margin: 0px 0px 0px 10px;
+
+}
+
+.headerBar .user-photo img{
+    width: 100%;
+}
+
+.chat-form {
+
+    margin: 0px auto 0px auto;
+    display: flex;
+    width: 500px;
+    min-width: 390px;
+    align-items: flex-start;
+    overflow: auto;
+    background: rgb(244, 243, 244);
+    border-radius: 0 0 10px 10px;
+    border-top: 5px solid rgb(212, 212, 212);
+
+}
+
+
+#inputDiv {
+    width: 75%;
+    margin-right: 15px;
+
+}
+
+
+.chat-form textarea {
+    padding: 5px 5px 5px 15px;
+    background: #fbfbfb;
+    width: 100%;
+    min-height: 5px;
+    border: 2px solid lightblue;
+    border-radius: 20px;
+    resize: none;
+    font-size: 18px;
+    color: #000;
+    margin: 15px 0px 15px 10px;
+    display:block;
+    overflow:hidden;
+    box-shadow: none;
     outline: none;
-    border: 2px solid lighten($main-color-2, 15%);
-  }
-}
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: #fff;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color: #fff;
-   opacity:  1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color: #fff;
-   opacity:  1;
-}
-
-input[type="submit"] {
-  -webkit-appearance: none;
-  appearance: none;
-  border: 0;
-
-  width: 25%;
-  margin: 0;
-
-  background-color: $main-color-2;
-  color: #fff;
-  border: 2px solid $main-color-2;
-  border-left: 0;
-  border-radius: 0 8px 8px 0;
-
-  font-family: inherit;
-  font-size: 1em;
-
-  transition: 200ms all ease-in;
-  &:hover {
-    background-color: lighten($main-color-2, 15%);
-    border-color: lighten($main-color-2, 15%);
-    color: #fff;
-  }
 
 }
 
-.input__nested-list {
-  list-style: disc;
-  list-style-position: inside;
-  padding: 0.5em;
-  &:first-child {
-    padding-top: 1em;
-  }
+.chat-form textarea:focus {
+    background: #fff;
 }
 
-.input__nested-link {
-  color: $main-color-1;
-  text-decoration: none;
-  border-bottom: 1px solid $main-color-1;
+#chat-form-buttons {
+    margin: auto;
+}
+
+/* Old Orange button for speaking, now we have an icon of a microphone*/
+/*.chat-form button {
+    height: 65px;
+    background: rgba(255, 153, 0, .7);;
+    padding: 5px 15px;
+    font-size: 30px;
+    color: white;
+    border: none;
+    margin: 0 10px;
+    border-radius: 3px;
+    box-shadow: 0 3px 0 rgba(255, 153, 0, .7);;
+    cursor: pointer;
+}*/
+
+.chat-form button:hover{
+    background: rgb(255, 153, 0);
+}
+
+.gif img {
+    margin: 10px;
+    border-radius: 20px;
 }
 
 
-::-webkit-scrollbar
-{
-  width: 0.65em;  /* for vertical scrollbars */
-  height: 0.65em; /* for horizontal scrollbars */
+.buttonResponse {
+    color: white;
+    max-width: 80%;
+    width: fit-content;
+    margin: 5px 0 5px auto;
+    border-radius: 20px 20px 0px 20px;
+    background: rgb(64, 172, 246);
+    overflow-wrap: break-word;
+    font-size: 18px;
+    padding: 10px;
+    margin: 20px 5px;
+    float: left;
 }
 
-::-webkit-scrollbar-track
-{
-  background: rgba(0, 0, 0, 0.1);
+.buttonResponse:hover{
+        background: rgb(100, 200, 255);
 }
 
-::-webkit-scrollbar-thumb
-{
-  background: rgba(0, 0, 0, 0.3);
+
+#switchInputType{
+    max-width: 40px;
+    max-height: 40px;
+
+}
+
+#rec {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+#buttonDiv {
+    margin: 0 auto;
+    width: inherit;
+
+}
+
+
+.chat .user-message {
+    padding: 15px;
+    margin: 5px 10px 0;
+    font-size: 18px;
+
+}
+
+.friend .user-message {
+    color: black;
+    width: auto;
+    max-width: 70%;
+    background: rgb(30,144,255);
+    border-radius: 20px 20px 20px 0;
+    margin-left: auto;
+}
+
+.self .user-message {
+    color: white;
+    max-width: 80%;
+    width: auto;
+    margin: 5px 0 5px auto;
+    border-radius: 20px 20px 0px 20px;
+    background: rgb(64, 172, 246);
+    overflow-wrap: break-word;
 }
