@@ -1,3 +1,4 @@
+var message = "";
 // Responsible for sending message to the chatbot.
 function Send(){
   var textAreaValue = document.getElementsByTagName("textarea")[0].value;
@@ -7,13 +8,23 @@ function Send(){
   }
 }
 
+function setLastMessage(message){
+  this.message = message;
+}
+
+function getLastMessage(){
+  return message;
+}
+
+//Add message(s) to the chat Log
 function appendtoLog(message){
-  user_friend = document.createElement('div');
+  var user_friend = document.createElement('div');
   user_friend.className = "chat friend";
-  user_message = document.createElement("p");
+  var user_message = document.createElement("p");
   user_message.className = "user-message";
   var value = document.createTextNode(message);
   user_message.appendChild(value);
   user_friend.appendChild(user_message);
   document.getElementsByClassName("chatlogs")[0].appendChild(user_friend);
+  setLastMessage(value);
 }

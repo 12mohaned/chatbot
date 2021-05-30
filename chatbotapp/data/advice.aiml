@@ -5,7 +5,7 @@
 <li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
 <li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
 </random>
-</template> 
+</template>
 </category>
 
  <category><pattern>ممكن اسامي ناس متخصصين </pattern>
@@ -14,16 +14,15 @@
 <li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
 <li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
 </random>
-</template> 
+</template>
 </category>
-
  <category><pattern>ممكن اسامي دكاتره</pattern>
 <template> <random>
 <li>  https://www.shezlong.com/en/ ده موقع عليه ارقام ناس متخخصه </li>
 <li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
 <li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
 </random>
-</template> 
+</template>
 </category>
 
 <category><pattern>ممكن مواقع او مصادر</pattern>
@@ -32,7 +31,7 @@
 <li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
 <li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
 </random>
-</template> 
+</template>
 </category>
 
 <category><pattern>ممكن رقم حد متخصص</pattern>
@@ -41,7 +40,7 @@
 <li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
 <li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
 </random>
-</template> 
+</template>
 </category>
 
 <category><pattern> ممكن اسامي اطباء </pattern>
@@ -50,7 +49,7 @@
 <li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
 <li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
 </random>
-</template> 
+</template>
 </category>
 
 <category><pattern> ممكن اكشف فين </pattern>
@@ -59,6 +58,6 @@
 <li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
 <li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
 </random>
-</template> 
+</template>
 </category>
 </aiml>
