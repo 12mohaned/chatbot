@@ -13,7 +13,6 @@ body {
 }
 
 .chatbox {
-
     width: 500px;
     min-width: 390px;
     height: 600px;
@@ -23,6 +22,7 @@ body {
     box-shadow: 0 3px #ccc;
 
 }
+
 
 .chatlogs {
     padding: 10px;

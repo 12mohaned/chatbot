@@ -2,35 +2,36 @@ from django.shortcuts import render
 from json import dumps
 import aiml
 import time
+import pathlib
+import pickle
+import requests
 
 def stopwords():
     return stopwords.words('Arabic')
-    
-//preprocessing the user input
+
 def preprocessing_pipeline():
     def preprocess(text):
-    text = regx.sub("[إأآا]", "ا", text)
-    text = regx.sub("ى", "ي", text)
-    text = regx.sub("ؤ", "ء", text)
-    text = regx.sub("ئ", "ء", text)
-    text = regx.sub("ة", "ه", text)
-    text = regx.sub("گ", "ك", text)
+        text = regx.sub("[إأآا]", "ا", text)
+        text = regx.sub("ى", "ي", text)
+        text = regx.sub("ؤ", "ء", text)
+        text = regx.sub("ئ", "ء", text)
+        text = regx.sub("ة", "ه", text)
+        text = regx.sub("گ", "ك", text)
 
-    ret_text = text
-    text_tokenized = word_tokenize(text)
-    for word in text_tokenized:
-        if not is_stop_word(word):
-            ret_text+=word
-    return ret_text
+        ret_text = text
+        text_tokenized = word_tokenize(text)
+        for word in text_tokenized:
+            if not is_stop_word(word):
+                ret_text+=word
+            return ret_text
 
     def tokenize(text):
-    return nltk.word_tokenize(text)
+        return nltk.word_tokenize(text)
 
     def is_stop_word(word):
-    if word in stop_words():
-        return True
-    return False
-
+        if word in stop_words():
+            return True
+        return False
 
 def init():
     kernel = aiml.Kernel()
@@ -40,14 +41,24 @@ def init():
 
 
 def chat(request):
-        if(rule_based("الا")):
-            print("found in rulebased")
-        else:
-            print("syntheseing a reply")
-        return render(request,"chatbotapp/channel.html")
+        curr_message = ""
+        if request.method == 'POST':
+            message=request.POST.get('task')
+            if(rule_based(message)):
+                chatbot = init()
+                response = chatbot.respond(message)
+                curr_message = response
+            else:
+                print("syntheseing a reply")
+
+        return render(request,"chatbotapp/channel.html",{"data":curr_message})
 
 def rule_based(message):
         chatbot = init()
-        input_text = input(">Human: ")
         response = chatbot.respond(message)
         return len(response) > 0
+def de_serialize_model():
+    pickled_model = open('chatbotapp/emotion_model.sav', 'rb')
+    naive_bayes_classifier = pickle.load(pickled_model)
+    pickled_model.close()
+    return naive_bayes_classifier
