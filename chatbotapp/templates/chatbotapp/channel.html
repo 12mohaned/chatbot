@@ -50,6 +50,8 @@
                       <div class="gif"><img src="Images/loading.gif"></div>
                   </div>
 
+                  <input placeholder="Enter Task" value = {{message}}" id="message" hidden/>
+
               </div>
           </div>
           <div class="chat-form">
@@ -85,6 +87,9 @@ outline: none;
 }
 </style>
   <script type="text/javascript">
+    
+    var mydata = "{{ message|safe }}";
+    console.log(data_from_django);
     $(document).on('submit','#task-form',function(e){
         e.preventDefault();
         $.ajax({
@@ -97,4 +102,6 @@ outline: none;
             },
             })
         });
+    
+
     </script>

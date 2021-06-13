@@ -5,6 +5,9 @@ import time
 import pathlib
 import pickle
 import requests
+import requests
+
+from django.http import JsonResponse
 
 def stopwords():
     return stopwords.words('Arabic')
@@ -25,9 +28,6 @@ def preprocessing_pipeline():
                 ret_text+=word
             return ret_text
 
-    def tokenize(text):
-        return nltk.word_tokenize(text)
-
     def is_stop_word(word):
         if word in stop_words():
             return True
@@ -44,19 +44,36 @@ def chat(request):
         curr_message = ""
         if request.method == 'POST':
             message=request.POST.get('task')
-            if(rule_based(message)):
+            if(pattern_found(message)):
                 chatbot = init()
                 response = chatbot.respond(message)
                 curr_message = response
             else:
                 print("syntheseing a reply")
 
-        return render(request,"chatbotapp/channel.html",{"data":curr_message})
+        return render(request,"chatbotapp/channel.html",{"message":JsonResponse(curr_message,safe = False)})
 
-def rule_based(message):
+def pattern_found(message):
         chatbot = init()
         response = chatbot.respond(message)
         return len(response) > 0
+
+def language_detection(message):
+    url = "https://api.meaningcloud.com/lang-4.0/identification"
+
+    text  = input()
+
+    payload={
+        'key': '4ebfba4a6f37ce3df9a5491cec15ce1a',
+        'txt': text
+    }
+    response = requests.post(url, data=payload)
+    output = response.json()
+    language_list = output['language_list']
+    language_nam  = language_list[0]['name']
+    language_relevance = language_list[0]['relevance']
+    return language_nam == "Arabic" and language_relevance >=70
+
 def de_serialize_model():
     pickled_model = open('chatbotapp/emotion_model.sav', 'rb')
     naive_bayes_classifier = pickle.load(pickled_model)
