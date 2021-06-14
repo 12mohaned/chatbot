@@ -1,5 +1,4 @@
-# Chatbot
-Arabic based chatbot that simulates the working responsibilities of a psychiatrist 
+# Arabic chatbot
 
 # Project Description 
 This chatbot is made as part of my thesis to explore the possibility of implementing an intelligentagent  in  Arabic  that
