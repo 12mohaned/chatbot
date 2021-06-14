@@ -78,9 +78,7 @@ def get_bot_response():
     response = "عفو ,لم يتم التعرف علي الجمله هل يمكن كتابه شي اخر"
     model = de_serialize_model()
     userText = preprocess(userText)
-    sentiment.append(userText)
-    print(model.predict(sentiment))
-    
+    sentiment.append(userText)    
     if language_detection(userText):
         if pattern_found(userText):
             chatbot = init()
