@@ -1,0 +1,204 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+
+ <category><pattern>مرحبا</pattern>
+<template>  مرحبا بيك ، مين معايا؟ انا معاك لو عاوز تتكلم عن اي حاجه مضايقك و لو عاوز تسأل عن اي استفسارات عشان اي ازمه او ضغوطات عندك او عاوز تسال
+عن اماكن ممكن تساعد</template>
+</category>
+
+<category><pattern>اهلا</pattern>
+<template> أهلا بيك ، أنا محمد انا معاك لو عاوز تتكلم عن اي حاجه مضايقك و لو عاوز تسأل عن اي استفسارات عشان اي ازمه او ضغوطات عندك او عاوز تسال
+عن اماكن ممكن تساعدك</template>
+</category>ا
+
+<category><pattern>اهلا و سهلا</pattern>
+<template> أهلا بيك ، أنا محمد انا معاك لو عاوز تتكلم عن اي حاجه مضايقك و لو عاوز تسأل عن اي استفسارات عشان اي ازمه او ضغوطات عندك او عاوز تسال
+عن اماكن ممكن تساعدك</template>
+</category>ا
+
+<category><pattern>هاي</pattern>
+<template> هايين. أنا محمد الاسم الكريم ايه ؟ انا معاك لو عاوز تتكلم عن اي حاجه مضايقك و لو عاوز تسأل عن اي استفسارات عشان اي ازمه او ضغوطات عندك او عاوز تسال
+عن اماكن ممكن تساعدك </template>
+</category>
+
+<category><pattern>السلام عليكم</pattern>
+<template> و عليكم السلام، أنا اسمي محمد. حضرتك ؟ انا معاك لو عاوز تتكلم عن اي حاجه مضايقك و لو عاوز تسأل عن اي استفسارات عشان اي ازمه او ضغوطات عندك او عاوز تسال
+عن اماكن ممكن تساعدك </template>
+</category>
+
+<category><pattern>هلا</pattern>
+<template>اهليين ، مين معايا ؟ انا معاك لو عاوز تتكلم عن اي حاجه مضايقك و لو عاوز تسأل عن اي استفسارات عشان اي ازمه او ضغوطات عندك او عاوز تسال
+عن اماكن ممكن تساعدك </template>
+</category>
+
+<category><pattern>حاضر</pattern>
+<template> يحضرلك الخير</template>
+</category>
+
+<category><pattern>ماشي</pattern>
+<template>  أوكي </template>
+</category>
+
+<category><pattern>أوكي</pattern>
+<template>  <srai>ماشي</srai> </template>
+</category>
+
+<category><pattern>تمام</pattern>
+<template> اه تمام كده </template>
+</category>
+
+<category><pattern>آسف</pattern>
+<template> حصل خير</template>
+</category>
+
+<category><pattern>آسفة</pattern>
+<template> حصل خير</template>
+</category>
+<category><pattern>صباح الخير</pattern>
+<template> <random>
+<li> صباح النور ، معك محمد. الاسم الكريم ايه بقى ؟ انا معاك لو عاوز تتكلم عن اي حاجه مضايقك و لو عاوز تسأل عن اي استفسارات عشان اي ازمه او ضغوطات عندك او عاوز تسال
+عن اماكن ممكن تساعدك </li>
+<li> صباح الفل ، مين معايا؟ انا معاك لو عاوز تتكلم عن اي حاجه مضايقك و لو عاوز تسأل عن اي استفسارات عشان اي ازمه او ضغوطات عندك او عاوز تسال
+عن اماكن ممكن تساعدك </li>
+<li> صباح الورد، أنا محمد. و حضرتك؟  انا معاك لو عاوز تتكلم عن اي حاجه مضايقك و لو عاوز تسأل عن اي استفسارات عشان اي ازمه او ضغوطات عندك او عاوز تسال
+عن اماكن ممكن تساعدك </li>
+</random>
+</template>
+</category>
+
+<category><pattern>مساء الخير</pattern>
+<template> <random>
+<li> مساء النور، اسمي محمد. الاسم الكريم ايه؟ انا معاك لو عاوز تتكلم عن اي حاجه مضايقك و لو عاوز تسأل عن اي استفسارات عشان اي ازمه او ضغوطات عندك او عاوز تسال
+عن اماكن ممكن تساعدك </li>
+<li> مساء الفل ، أنا محمد. مين معايا انا معاك لو عاوز تتكلم عن اي حاجه مضايقك و لو عاوز تسأل عن اي استفسارات عشان اي ازمه او ضغوطات عندك او عاوز تسال
+عن اماكن ممكن تساعدك </li>
+<li> مساء الورد ، اسمي محمد. اسم حضرتك ايه ؟ انا معاك لو عاوز تتكلم عن اي حاجه مضايقك و لو عاوز تسأل عن اي استفسارات عشان اي ازمه او ضغوطات عندك او عاوز تسال
+عن اماكن ممكن تساعدك </li>
+<li> مساء القشطة ، معاك محمد. الاسم الكريم ؟ انا معاك لو عاوز تتكلم عن اي حاجه مضايقك و لو عاوز تسأل عن اي استفسارات عشان اي ازمه او ضغوطات عندك او عاوز تسال
+عن اماكن ممكن تساعدك </li>
+</random>
+</template>
+</category>
+
+<category><pattern>شكرًا</pattern>
+<template>
+<random>
+<li>عفوًا </li>
+<li> العفو </li>
+<li>العفو على إيه</li>
+</random>
+</template>
+</category>
+
+<category><pattern>تسلم ايدك</pattern>
+<template>و إيدك</template>
+</category>
+
+<category><pattern>متشكر</pattern>
+<template>
+<srai> شكرًا </srai>
+</template>
+</category>
+
+<category><pattern>ألف شكر</pattern>
+<template>
+<srai> شكرًا </srai>
+</template>
+</category>
+
+<category><pattern> كيف حالك</pattern>
+<template> <random>
+<li> بخير الحمدلله ، و حضرتك؟ </li>
+<li> كويسة الحمدلله، و حضرتك؟ </li>
+</random>
+</template>
+</category>
+
+<category><pattern>إزيك</pattern>
+<template>
+	<srai>كيف حالك </srai>
+</template>
+</category>
+
+<category><pattern>إزاي الأحوال</pattern>
+<template>
+	<srai>كيف حالك </srai>
+</template>
+</category>
+
+<category><pattern> ازاي الصحة</pattern>
+
+<template>
+	<srai>كيف حالك </srai>
+</template>
+</category>
+
+<category><pattern>  كيفك </pattern>
+<template>
+	<srai>كيف حالك </srai>
+</template>
+</category>
+
+<category><pattern> عاملة إيه </pattern>
+<template> <random>
+<li> ما فيش أخبار </li>
+<li> الحمدلله </li>
+<li> كويسة </li>
+</random>
+</template>
+</category>
+
+<category><pattern> إيه الأخبار</pattern>
+<template>
+<random>
+<li> ما فيش أخبار ، الأخبار عندك </li>
+<li> الحمدلله </li>
+<li> كويسة </li>
+</random>
+</template>
+</category>
+
+<category><pattern>أخبارك</pattern>
+<template>
+	<srai>^ إيه الأخبار ^ </srai>
+</template>
+</category>
+
+<category><pattern>فرصة سعيدة</pattern>
+<template>^ أنا الأسعد ^</template>
+</category>
+
+<category><pattern>تصبحي على خير</pattern>
+<template>و انت من أهله</template>
+</category>
+
+<category><pattern>مع السلامة</pattern>
+<template>^ الله يسلمك ^</template>
+</category>
+
+<category><pattern>من فضلك</pattern>
+<template>يزيد فضلك </template>
+</category>
+
+
+<category><pattern>عن إذنك</pattern>
+<template>إذنك معك </template>
+</category>
+
+<category><pattern>نعيمًا</pattern>
+<template>الله ينعم عليك</template>
+</category>
+
+<category><pattern>أكلت</pattern>
+<template>بالهنا و الشفا</template>
+</category>
+
+<category><pattern>طلب</pattern>
+<template>غالي و الطلب رخيص</template>
+</category>
+
+<category><pattern> كل عام و انتي بخير</pattern>
+<template>و انت بخير</template>
+</category>
+
+</aiml>

@@ -1,0 +1,63 @@
+<aiml version="1.0.1" encoding="UTF-8">
+ <category><pattern> ممكن اماكن اكشف فيها </pattern>
+<template> <random>
+<li>  https://www.shezlong.com/en/ طبعا اتفضل  </li>
+<li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
+<li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
+</random>
+</template>
+</category>
+
+ <category><pattern>ممكن اسامي ناس متخصصين </pattern>
+<template> <random>
+<li>  https://www.shezlong.com/en/ ده موقع عليه ارقام ناس متخخصه </li>
+<li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
+<li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
+</random>
+</template>
+</category>
+ <category><pattern>ممكن اسامي دكاتره</pattern>
+<template> <random>
+<li>  https://www.shezlong.com/en/ ده موقع عليه ارقام ناس متخخصه </li>
+<li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
+<li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
+</random>
+</template>
+</category>
+
+<category><pattern>ممكن مواقع او مصادر</pattern>
+<template> <random>
+<li>  https://www.shezlong.com/en/ ده موقع عليه ارقام ناس متخخصه </li>
+<li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
+<li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
+</random>
+</template>
+</category>
+
+<category><pattern>ممكن رقم حد متخصص</pattern>
+<template> <random>
+<li>  https://www.shezlong.com/en/ ده موقع عليه ارقام ناس متخخصه </li>
+<li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
+<li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
+</random>
+</template>
+</category>
+
+<category><pattern> ممكن اسامي اطباء </pattern>
+<template> <random>
+<li>  https://www.shezlong.com/en/ ده موقع عليه ارقام ناس متخخصه </li>
+<li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
+<li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
+</random>
+</template>
+</category>
+
+<category><pattern> ممكن اكشف فين </pattern>
+<template> <random>
+<li>  https://www.shezlong.com/en/ ده موقع عليه ارقام ناس متخخصه </li>
+<li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>
+<li> https://www.shezlong.com/en/ ان شاء الله هتلاقي الي محتاجه هنا </li>
+</random>
+</template>
+</category>
+</aiml>
