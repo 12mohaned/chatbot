@@ -10,3 +10,7 @@ The chatbot should make patients feel less anxious and worried after the session
 
 # Chatbot Architecture 
 
+If you want to embed images, this is how you do it:
+
+![Image of chatbot Architecture](static/media/chatbot-arch.jpg)
+
