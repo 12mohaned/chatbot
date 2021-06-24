@@ -10,5 +10,5 @@ The chatbot should make patients feel less anxious and worried after the session
 # Chatbot Architecture 
 
 The below image displays the chatbot architecture 
-![Image of chatbot Architecture](static/media/chatbot-arch.jpg)
+![Image of chatbot Architecture](static/media/chatbot-arch.png)
 
