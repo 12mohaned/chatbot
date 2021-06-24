@@ -1,5 +1,5 @@
 <aiml version="1.0.1" encoding="UTF-8">
- <category><pattern> ممكن اماكن اكشف فيها </pattern>
+ <category><pattern>ممكن اماكن اكشف فيها</pattern>
 <template> <random>
 <li>  https://www.shezlong.com/en/ طبعا اتفضل  </li>
 <li>  https://www.shezlong.com/en/ هتلاقي الي محتاجه هنا  </li>

@@ -80,7 +80,7 @@
 </template>
 </category>
 
-<category><pattern>شكرًا</pattern>
+<category><pattern>شكرا</pattern>
 <template>
 <random>
 <li>عفوًا </li>
@@ -106,10 +106,10 @@
 </template>
 </category>
 
-<category><pattern> كيف حالك</pattern>
+<category><pattern>كيف حالك</pattern>
 <template> <random>
 <li> بخير الحمدلله ، و حضرتك؟ </li>
-<li> كويسة الحمدلله، و حضرتك؟ </li>
+<li> كويس الحمدلله، و حضرتك؟ </li>
 </random>
 </template>
 </category>
@@ -120,7 +120,7 @@
 </template>
 </category>
 
-<category><pattern>إزاي الأحوال</pattern>
+<category><pattern>ازاي الأحوال</pattern>
 <template>
 	<srai>كيف حالك </srai>
 </template>
@@ -139,7 +139,7 @@
 </template>
 </category>
 
-<category><pattern> عاملة إيه </pattern>
+<category><pattern> عامل ايه </pattern>
 <template> <random>
 <li> ما فيش أخبار </li>
 <li> الحمدلله </li>
@@ -148,7 +148,7 @@
 </template>
 </category>
 
-<category><pattern> إيه الأخبار</pattern>
+<category><pattern> ايه الاخبار</pattern>
 <template>
 <random>
 <li> ما فيش أخبار ، الأخبار عندك </li>
@@ -172,7 +172,11 @@
 <template>و انت من أهله</template>
 </category>
 
-<category><pattern>مع السلامة</pattern>
+<category><pattern>مع السلامه</pattern>
+<template>^ الله يسلمك ^</template>
+</category>
+
+<category><pattern>سلام</pattern>
 <template>^ الله يسلمك ^</template>
 </category>
 
@@ -181,7 +185,7 @@
 </category>
 
 
-<category><pattern>عن إذنك</pattern>
+<category><pattern>عن اذنك</pattern>
 <template>إذنك معك </template>
 </category>
 
@@ -199,6 +203,43 @@
 
 <category><pattern> كل عام و انتي بخير</pattern>
 <template>و انت بخير</template>
+</category>
+
+
+<category><pattern> الحمد لله </pattern>
+<template> <random>
+<li>  ان شاء الله دايما </li>
+<li> و نعمه بالله</li>
+<li> يا رب دايما</li>
+</random>
+</template>
+</category>
+
+<category><pattern> كويس </pattern>
+<template> <random>
+<li>  ان شاء الله دايما </li>
+<li> و نعمه بالله</li>
+<li> يا رب دايما</li>
+</random>
+</template>
+</category>
+
+<category><pattern> زي الفل </pattern>
+<template> <random>
+<li>  ان شاء الله دايما </li>
+<li> و نعمه بالله</li>
+<li> يا رب دايما</li>
+</random>
+</template>
+</category>
+
+<category><pattern> تمام </pattern>
+<template> <random>
+<li>  ان شاء الله دايما </li>
+<li> و نعمه بالله</li>
+<li> يا رب دايما</li>
+</random>
+</template>
 </category>
 
 </aiml>
