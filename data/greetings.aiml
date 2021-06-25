@@ -143,7 +143,7 @@
 <template> <random>
 <li> ما فيش أخبار </li>
 <li> الحمدلله </li>
-<li> كويسة </li>
+<li> كويس </li>
 </random>
 </template>
 </category>
@@ -153,7 +153,7 @@
 <random>
 <li> ما فيش أخبار ، الأخبار عندك </li>
 <li> الحمدلله </li>
-<li> كويسة </li>
+<li> كويس </li>
 </random>
 </template>
 </category>
@@ -168,7 +168,7 @@
 <template>^ أنا الأسعد ^</template>
 </category>
 
-<category><pattern>تصبحي على خير</pattern>
+<category><pattern>تصبح على خير</pattern>
 <template>و انت من أهله</template>
 </category>
 
