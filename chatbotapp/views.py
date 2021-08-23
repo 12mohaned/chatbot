@@ -5,7 +5,6 @@ import time
 import pathlib
 import pickle
 import requests
-import requests
 
 from django.http import JsonResponse
 
@@ -40,17 +39,20 @@ def init():
     return kernel
 
 
-def chat(request):
+async def chat(request):
         curr_message = ""
         if request.method == 'POST':
             message=request.POST.get('task')
-            if(pattern_found(message)):
-                chatbot = init()
-                response = chatbot.respond(message)
-                curr_message = response
+            lang_detect = await language_detection(message)
+            if lang_detect:
+                if(pattern_found(message)):
+                    chatbot = init()
+                    response = chatbot.respond(message)
+                    curr_message = response
+                else:
+                    print("syntheseing a reply")
             else:
-                print("syntheseing a reply")
-
+                print("The chatbot only support arabic language")
         return render(request,"chatbotapp/channel.html",{"message":JsonResponse(curr_message,safe = False)})
 
 def pattern_found(message):
@@ -58,20 +60,18 @@ def pattern_found(message):
         response = chatbot.respond(message)
         return len(response) > 0
 
-def language_detection(message):
+async def language_detection(message):
     url = "https://api.meaningcloud.com/lang-4.0/identification"
-
-    text  = input()
-
     payload={
         'key': '4ebfba4a6f37ce3df9a5491cec15ce1a',
-        'txt': text
+        'txt': message
     }
     response = requests.post(url, data=payload)
     output = response.json()
     language_list = output['language_list']
     language_nam  = language_list[0]['name']
     language_relevance = language_list[0]['relevance']
+
     return language_nam == "Arabic" and language_relevance >=70
 
 def de_serialize_model():
